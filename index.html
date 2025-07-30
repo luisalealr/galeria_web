@@ -1,37 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <nav>
-      <a href="#">Home</a>
-      <a href="diseño2.html">Presentation</a>
-      <a href="diseño3.html">Shop</a>
-    </nav>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="layout">
+    <div id="navbar"></div>
+
     <header>
       <p class="titulo_header">404 NOT FOUND</p>
     </header>
+
     <div class="contenedor">
       <div class="contenido">
-        <img
-          class="no_encontrado"
+        <img class="no_encontrado"
           src="https://growingyoursite.com/wp-content/uploads/2021/11/Google-404-page-1-e1640807226567.png"
-          alt="Imagen de error 404"
-        />
+          alt="Imagen de error 404" />
         <div class="texto_contenido">
           <h1 class="titulo_error">I have bad news for you</h1>
-          <p>
-            The page you are looking for might be removed or is temporarily
-            unaviable
-          </p>
+          <p>The page you are looking for might be removed or is temporarily unavailable.</p>
           <a class="boton_back" href="#">Back to homepage</a>
         </div>
       </div>
     </div>
-    <footer>@Creado por Luisa</footer>
-  </body>
+
+    <div id="footer"></div>
+  </div>
+  <script>
+    // header
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+
+    // footer
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+</body>
+
 </html>

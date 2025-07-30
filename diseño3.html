@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="layout">
+        <div id="navbar"></div>
+
+        <header>
+            <p class="titulo_header">Shop</p>
+        </header>
+
+        <div class="contenedor">
+            <div class="card">
+                <div class="card_contenido">
+                    <div class="card_imagen_shop">
+                        <img src="https://twentyonepilots.warnerartists.net/dw/image/v2/BHCC_PRD/on/demandware.static/-/Sites-warner-master/default/dwdcee51d6/TWENTY%20ONE%20PILOTS/21%20pilots/Standard%20Vinyl%20(1).png?sw=600&sh=600&sm=fit" alt="">
+                    </div>
+                    <p>Breach Red Vinyl</p>
+                    <p>Preventa</p>
+                    <p>$27.98 USD</p>
+                    
+                    <p>Pre-Order Releases on: 09/12/2025</p>
+                    <div class="botones">
+                        <a class="boton_secundario" href="">Like</a>
+                        <a class="boton_secundario" href="">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer"></div>
+    </div>
+    <script>
+        // header
+        fetch('navbar.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+
+        // footer
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+</body>
+
+</html>

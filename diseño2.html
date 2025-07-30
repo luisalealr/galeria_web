@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Presentation</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="layout">
+        <div id="navbar"></div>
+
+        <header>
+            <p class="titulo_header">Presentation</p>
+        </header>
+
+        <div class="contenedor">
+            <div class="card">
+                <div class="card_contenido">
+                    <div class="card_imagen">
+                        <img src="https://i.pinimg.com/474x/e1/47/80/e14780800496e153102cfefe23b517a3.jpg" alt="">
+                    </div>
+                    <p>Twenty One Pilots</p>
+                    <div class="logo-estrellas">
+                        <span class="estrella">&#9733;</span>
+                        <span class="estrella">&#9733;</span>
+                        <span class="estrella">&#9733;</span>
+                        <span class="estrella">&#9733;</span>
+                        <span class="estrella">&#9733;</span>
+                    </div>
+                    <p>Musical band of... it is not known what genre, it is only known that it is not rap or hiphop. It
+                        is made up of singer Tyler Joseph and drummer Josh Dun.</p>
+                    <div class="botones">
+                        <a class="boton_secundario" href="">Read More</a>
+                        <a class="boton_primario" href="">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer"></div>
+    </div>
+    <script>
+        // header
+        fetch('navbar.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+
+        // footer
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+
+        //llenar estrellas
+        const estrellas = document.querySelectorAll('.estrella');
+        for (let i = 0; i < 3; i++) {
+            estrellas[i].classList.add('llena');
+        }
+    </script>
+</body>
+
+</html>
